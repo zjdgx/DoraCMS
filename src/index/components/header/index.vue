@@ -6,7 +6,7 @@
             </el-col>
             <el-col :xs="22" :sm="22" :md="22" :lg="22" :xl="14">
                 <el-row :gutter="15" class="grid-content bg-purple-light">
-                    <el-col :xs="24" :sm="4" :md="4" :lg="4">
+                    <el-col :xs="24" :sm="4" :md="4" :lg="1">
                       <el-row>
                         <el-col :xs="7" :sm="0" :md="0" :lg="0" :xl="0">
                           <el-dropdown trigger="click">
@@ -51,23 +51,14 @@
                         </el-col>
                       </el-row>                   
                     </el-col>
-                    <el-col :xs="0" :sm="11" :md="11" :lg="11">
+                    <el-col :xs="0" :sm="11" :md="11" :lg="14">
                         <nav class="header-nav">
                           <ul>
                             <li :class="{active : $route.fullPath == '/'}"><router-link :to="{path: '/'}">首页</router-link></li>
-                            <li>
-                              <el-dropdown size="medium">
-                              <span class="el-dropdown-link">
-                                文章分类<i class="el-icon-arrow-down el-icon--right"></i>
-                              </span>
-                              <el-dropdown-menu slot="dropdown">
-                                <el-dropdown-item v-for="(nav,index) in headerNav" :key="index" v-once>
-                                  <router-link :to="{path: '/'+nav.defaultUrl+ '___'+nav._id}">{{nav.name}}</router-link>
-                                </el-dropdown-item>
-                              </el-dropdown-menu>
-                            </el-dropdown>
+                            <li v-for="(nav,index) in headerNav" :key="index" v-once>
+                              <router-link :to="{path: '/'+nav.defaultUrl+ '___'+nav._id}">{{nav.name}}</router-link>
                             </li>
-                            <li :class="{active : $route.fullPath == '/cmscase___SkCL09aCb'}"><router-link :to="{path: '/cmscase___SkCL09aCb'}">应用案例</router-link></li>
+                            <!-- <li :class="{active : $route.fullPath == '/cmscase___SkCL09aCb'}"><router-link :to="{path: '/cmscase___SkCL09aCb'}">应用案例</router-link></li> -->
                           </ul>
                         </nav>
                     </el-col>
