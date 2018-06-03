@@ -8,3 +8,4 @@ server/config/secret.js
 logs/
 databak/
 dist/
+package-lock.json
