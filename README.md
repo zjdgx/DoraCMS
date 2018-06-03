@@ -139,7 +139,7 @@ $ npm run start
 http://localhost:8080
 
 登录
-http://localhost:8080/dr-admin
+http://localhost:8080/dr-admin 用户名doramart / 密码123456
 
 # 捐赠
 如果你发现DoraCMS很有用，可以请生哥喝杯咖啡(⊙o⊙)哦
